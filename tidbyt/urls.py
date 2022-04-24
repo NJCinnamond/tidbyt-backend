@@ -18,9 +18,11 @@ from django.urls import path, include
 
 from tidbyt_feature.urls import FeatureRouter
 from tidbyt_installation.urls import InstallationRouter
+from tidbyt_device.urls import DeviceRouter
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(FeatureRouter.urls)),
-    path('', include(InstallationRouter.urls)),
+    path("admin/", admin.site.urls),
+    path("", include(FeatureRouter.urls)),
+    path("", include(InstallationRouter.urls)),
+    path("", include(DeviceRouter.urls)),
 ]
